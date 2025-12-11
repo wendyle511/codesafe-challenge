@@ -1,0 +1,31 @@
+User Story
+
+US11 - Learner Fixes Insecure Logging in a Challenge
+
+As a learner completing a Codesafe challenge,
+
+I want to identify and repair insecure logging behavior in a provided Python login program,
+
+So that I can learn secure software engineering practices and ensure that sensitive information such as passwords is never stored in logs.
+
+Short Description:
+The learner discovers that the starter code logs raw passwords on every login attempt. The challenge requires fixing the insecure logging while keeping authentication behavior the same and ensuring all test cases pass.
+
+Acceptance Criteria:
+- Starter Python code containing insecure logging is provided.
+- Learners can run the program and observe insecure log output.
+- Learner removes or sanitizes the password field so no sensitive information appears in logs.
+- Login behavior remains unchanged:
+    - Correct username + password → login success
+    - Incorrect credentials → login failure
+- All test cases pass, including ones that check the content of the log.
+- The challenge is marked “Completed.”
+
+Origin:
+- G01 - Interactive Challenge-Based Learning (HW 1)
+- SCNO1 - Student completes a challenge (HW 4)
+- EL03 - Functional requirements related to challenge structure (HW 2b)
+- EL05 - Constraints on authentication and secure logging (Field Notes 11/12 & 11/19)
+- Case Study - Codesafe teaches secure practices through hands on activities.
+
+Story Points: Medium-High
