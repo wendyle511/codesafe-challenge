@@ -1,0 +1,23 @@
+Coding challenge scenario:
+You are building a tiny login system for an internal Codesafe tool.
+  -Users type a username and password in the terminal.
+  -The system checks the credentials against a small in-memory user database.
+  -Every login attempt is written to a security log so developers can debug problems.
+
+Problem:
+Right now, the program logs the raw password that the user typed.
+This is dangerous because:
+  -Anyone who can see the logs can see real passwords.
+  -People often reuse passwords on other websites.
+  -Logs might be stored for a long time or copied to other systems.
+
+Your job is to fix the logging so that passwords are never stored in the logs, while keeping the login behavior the same.
+The learner must:
+  1. find the security flaw in the python code
+  2. Change the code so that:
+    a. Login attempts are still logged 
+    b. BUT the actual password never appears in any log entry
+  3. Keep the same logic of logic of password usage:
+    a. Correct username + correct password = login successes
+    b. Wrong username or password = login failed
+
