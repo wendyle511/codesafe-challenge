@@ -1,0 +1,87 @@
+Use Case
+
+UC13 - Secure Logging Challenge
+
+Use Case Name: Secure Logging Challenge
+
+Author: Simar Virk
+
+Priority: High
+
+Source:
+- Case Study guidance on secure coding
+- Elicitation Notes (10/23, 11/5) - logging and authentication constraints
+- Scenarios on completing challenges & sandbox execution (SCN01, SCN02)
+
+Short Description:
+A learner completes a challenge that requires fixing insecure logging in a Python login program. The learner must remove sensitive data from log output while preserving program functionality and passing all test cases.
+
+Goal(s):
+- Teach learners how to reorganize insecure logging patterns.
+- Ensure secure handling of password data.
+- Reinforce real-world secure software development skills.
+
+Primary Actor: Learner
+
+Secondary Actors:
+- DOJO Execution Environment
+- Automated Grader
+- Logging System
+
+Preconditions:
+- Learner is logged in.
+- Challenge description, starter code, and test cases are available.
+- The execution environment is operational.
+
+Success End Condition:
+- Learner submits a corrected version of the program that passes all tests and securely logs attempts without exposing passwords.
+
+Failed End Condition:
+- Passwords still appear in logs OR
+- Authentication behavior is broken OR
+- Test cases do not pass OR
+- Challenge is not submitted successfully.
+
+Trigger:
+- Learner opens the Secure Logging Challenge in the Codesafe coding environment.
+
+Basic Flow 
+  1. Learner opens the coding environment for the Secure Logging Challenge.
+  2. The system loads starter code, instructions, and test cases.
+  3. Learner reviews the insecure logging implementation.
+  4. Learner modifies the logging logic to remove or mask the password.
+  5. Learner runs the test suite.
+  6. The system executes test cases and shows results.
+  7. Learner revises the implementation and reruns tests as needed.
+  8. All tests pass, including those validating secure log output.
+  9. Learner submits the corrected code.
+  10. The system marks the challenge as “Completed.”
+
+Alternative Flows
+  3.a - Learner asks the AI chatbot for assistance
+    - System opens AI panel (per UC10)
+    - Chatbot provides conceptual guidance without revealing solutions.
+    - Flow resumes at Step 4.
+  5.a - Learner executes the code without submitting it
+    - The system displays intermediate results.
+    - The learner continues editing.
+    - Flow resumes at Step 7.
+
+Exception Flows
+  5.b - Test cases fail due to insecure logging
+    - System shows failure: “Sensitive data detected in logs.”
+    - Learner reviews failure details and returns to Step 4.
+  5.c - Test cases fail due to incorrect authentication logic
+    - System shows which authentication checks failed.
+    - Learner corrects logic and returns to Step 7.
+  6.a - Sandbox execution error
+    - System displays an execution error (SCN02)
+    - Learner retries execution once the system is stable.
+    - Flow resumes at Step 5.
+
+Supplementary Information
+- Logs may be used for analytics and debugging (per Field Notes)
+- Password-handling rules align with secure software engineering standards.
+- Use case complements UC03 - Complete Challenge but adds a security-specific constraint. 
+
+
